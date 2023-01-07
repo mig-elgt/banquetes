@@ -34,16 +34,16 @@ SQL Databases
 Reports Tool
 > - Crystal Reports
 
-## Base de Datos
+## Data Base
 ![Alt text](./db_design/Eventos2.png?raw=true)
 
+## System Views
 ![Alt text](./docs/Screenshots/Reports/banquetes-event.png?raw=true)
 
 ![Alt text](./docs/Screenshots/Reports/events-company.png?raw=true)
 
 ![Alt text](./docs/Screenshots/Reports/waiters-event.png?raw=true)
 
-## System
 ![Alt text](./docs/Screenshots/clients.png?raw=true)
 
 ![Alt text](./docs/Screenshots/employers.png?raw=true)
