@@ -1,0 +1,347 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">x86</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{F515BD0D-84DD-4636-B809-D97AAE6AA661}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>GestionadorDeEventos</RootNamespace>
+    <AssemblyName>GestionadorDeEventos</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <TargetFrameworkProfile>
+    </TargetFrameworkProfile>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|x86' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|x86' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="CrystalDecisions.CrystalReports.Engine, Version=13.0.2000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="CrystalDecisions.ReportSource, Version=13.0.2000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="CrystalDecisions.Shared, Version=13.0.2000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="CrystalDecisions.Windows.Forms, Version=13.0.2000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="DevComponents.DotNetBar2, Version=11.4.0.9, Culture=neutral, PublicKeyToken=7eb7c3a35b91de04, processorArchitecture=MSIL" />
+    <Reference Include="FlashControlV71, Version=1.0.3187.32366, Culture=neutral, PublicKeyToken=692fbea5521e1304" />
+    <Reference Include="IBM.Data.DB2, Version=9.7.4.4, Culture=neutral, PublicKeyToken=7c307b91aa13d208, processorArchitecture=x86" />
+    <Reference Include="MySql.Data, Version=6.7.4.0, Culture=neutral, PublicKeyToken=c5687fc88969c44d, processorArchitecture=MSIL" />
+    <Reference Include="Npgsql">
+      <HintPath>..\..\..\..\..\..\Public\Documents\Base de Datos B\Manejadores\POSTGRESQL\Npgsql-2.0.11.91\bin\Debug4\Npgsql.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Consulta.cs" />
+    <Compile Include="CQuery.cs" />
+    <Compile Include="esquemalocDataSet.cs">
+      <DependentUpon>esquemalocDataSet.xsd</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="esquemalocDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>esquemalocDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="FBanquetes.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FBanquetes.Designer.cs">
+      <DependentUpon>FBanquetes.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FClientes.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FClientes.Designer.cs">
+      <DependentUpon>FClientes.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FEmpleados.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FEmpleados.Designer.cs">
+      <DependentUpon>FEmpleados.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FEmpleadosEvento.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FEmpleadosEvento.Designer.cs">
+      <DependentUpon>FEmpleadosEvento.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FEventos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FEventos.Designer.cs">
+      <DependentUpon>FEventos.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FMusicos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FMusicos.Designer.cs">
+      <DependentUpon>FMusicos.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FMusicosEvento.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FMusicosEvento.Designer.cs">
+      <DependentUpon>FMusicosEvento.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form1.Designer.cs">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FPlatillos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FPlatillos.Designer.cs">
+      <DependentUpon>FPlatillos.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Reportes\CR_BanquetesEvento.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>CR_BanquetesEvento.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Reportes\CR_EmpEventos.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>CR_EmpEventos.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Reportes\CR_EventosEmpresas.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>CR_EventosEmpresas.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Reportes\FEventosEmpresas.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Reportes\FEventosEmpresas.Designer.cs">
+      <DependentUpon>FEventosEmpresas.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Reportes\RepBanquetesEvento.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Reportes\RepBanquetesEvento.Designer.cs">
+      <DependentUpon>RepBanquetesEvento.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Reportes\RepEmpsPorEvento.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Reportes\RepEmpsPorEvento.Designer.cs">
+      <DependentUpon>RepEmpsPorEvento.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="FBanquetes.resx">
+      <DependentUpon>FBanquetes.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FClientes.resx">
+      <DependentUpon>FClientes.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FEmpleados.resx">
+      <DependentUpon>FEmpleados.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FEmpleadosEvento.resx">
+      <DependentUpon>FEmpleadosEvento.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FEventos.resx">
+      <DependentUpon>FEventos.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FMusicos.resx">
+      <DependentUpon>FMusicos.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FMusicosEvento.resx">
+      <DependentUpon>FMusicosEvento.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form1.resx">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FPlatillos.resx">
+      <DependentUpon>FPlatillos.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <EmbeddedResource Include="Reportes\CR_BanquetesEvento.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>CR_BanquetesEvento.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reportes\CR_EmpEventos.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>CR_EmpEventos.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reportes\CR_EventosEmpresas.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>CR_EventosEmpresas.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reportes\FEventosEmpresas.resx">
+      <DependentUpon>FEventosEmpresas.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reportes\RepBanquetesEvento.resx">
+      <DependentUpon>RepBanquetesEvento.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reportes\RepEmpsPorEvento.resx">
+      <DependentUpon>RepEmpsPorEvento.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="app.config" />
+    <None Include="esquemalocDataSet.xsc">
+      <DependentUpon>esquemalocDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="esquemalocDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>esquemalocDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="esquemalocDataSet.xss">
+      <DependentUpon>esquemalocDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Clientes.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\customer.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\custormer.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\employee.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Dinner.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\plate.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\music.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\reports.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\event.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\banquet.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\banquete.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\LogOut.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\edit-file-icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\edit-file-icon1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\clear-icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Add-Client-icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Remove-client-icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Edit-Client-icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\addEmployee.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\deleteEmployee.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\editEmployee.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\addSinger.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\deleteSinger.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\updateSinger.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\addPlate.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\deletePlate.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\updatePlate.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\addEvento.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\deleteEvento.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\updateEvento.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{C0C07587-41A7-46C8-8FBD-3F9C8EBE2DDC}" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
